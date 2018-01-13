@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css?family=Arsenal:700&subset=cyrillic-ext');
+$font-main: 'Arsenal', sans-serif;
+$color-text: rgb(47,49,50);
+$color-detail: rgb(255, 61, 0);
+$letter: 1px;
+
+.row {
+  float: left;
+  width: 30%;
+}
+
+img {
+  float: left;
+}
+
+#brand {
+  float: left;
+  margin: 10px 5px;
+  color: $color-text;
+  font-family: $font-main;
+  letter-spacing: $letter;
+}
+
+.navbar {
+  width: 70%;
+  float: left;
+  text-align: right;
+
+   a {
+     color: $color-text;
+     text-decoration: none;
+     font-family: $font-main;
+     letter-spacing: $letter;
+     margin-left: 15px;
+   }
+
+   a:hover {
+     border-bottom: 2px solid $color-detail;
+   }
+
+   a.presentation {
+    background-color: $color-detail;
+    color: rgb(255,255,255);
+    padding: 5px 14px;
+   }
+
+   a.presentation:hover {
+    background-color: transparent;
+    color: $color-detail;
+    border: 2px solid $color-detail;
+   }
+}
+    
+#main {
+  clear: both;
+  text-align: left;
+  padding-top: 90px;
+  padding-left: 40px;
+  background: url('../images/bckg.jpg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  height: 100vh;
+
+  a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .number {
+    color: rgb(233,232,230);
+    font-family: $font-main;
+    font-size: 72px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .text {
+    font-family: $font-main;
+    color: $color-text;
+    font-size: 20px;
+    letter-spacing: $letter;
+    margin: 0;
+    padding: 0;
+    }
+
+  .text::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 75px;
+    transition: width .5s ease-in-out; 
+    border-bottom: 2px solid $color-detail;   
+    bottom: 0;
+  }
+
+  .text:hover::before{
+    width: 400px;
+ }
+}
+
+  /* .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  bottom: 0;
+  margin: 100px;
+
+  .fwd {
+    padding: 20px 21px;
+    background-color: $color-detail;
+    transform: rotate(45deg);
+  
+  .arrow2 {    
+    left: auto;
+    right: auto;
+    border: solid rgb(255,255,255);
+    border-width: 0 3px 3px 0;
+    display: block;
+    align-items: center;
+    padding: 3px;
+    margin: 2px;
+  }
+}
+}
+
+  .btn:hover {
+    .fwd {
+      padding: 20px 21px;
+      background-color: $color-detail;
+      transform: rotate(45deg);
+    
+    .arrow1 {
+      border: solid rgba(255,255,255, 0.4);
+      border-width: 0 3px 3px 0;
+      align-items: center;
+      display: block;
+      padding: 3px;
+      margin: 2px;
+    }
+    .arrow2 {
+      position: absolute;
+      border: solid rgba(255,255,255, 0.7);
+      border-width: 0 3px 3px 0;
+      align-items: center;
+      display: block;
+      padding: 3px;
+      margin: 2px;
+    }
+    .arrow3 {    
+      position: absolute;
+      border: solid rgb(255,255,255);
+      border-width: 0 3px 3px 0;
+      align-items: center;
+      display: block;
+      padding: 3px;
+      margin: 2px;
+    }
+  }
+  } */
+
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    margin-top:100px;
+    bottom: 0;
+    
+    .fwd {
+      padding: 20px 21px;
+      background-color: $color-detail;
+      transform: rotate(45deg);
+      box-shadow: 0 0 40px 40px $color-detail inset, 0 0 0 0 $color-detail;
+      transition: all 150ms ease-in-out;
+      .arrow2 {    
+        border: solid rgb(255,255,255);
+        border-width: 0 3px 3px 0;
+        display: block;
+        align-items: center;
+        padding: 3px;
+        margin: 2px;
+      }
+    }
+    }
+
+    .fwd:hover {
+      box-shadow: 0 0 10px 0 $color-detail inset, 0 0 10px 4px $color-detail;
+      background-color: transparent;
+      .arrow2 {
+        border: solid $color-detail;
+        border-width: 0 3px 3px 0;
+      }
+      }
+    
+
+#decision {
+  background-image: url('../images/bckg.jpg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  height: 100vh;
+}
+
+#forwhom {
+  background: url('../images/bckg.jpg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  height: 100vh;
+}
+
+#team {
+  background: url('../images/bckg.jpg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  height: 100vh;
+}
+
+#pres {
+  background: url('../images/bckg.jpg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  height: 100vh;
+}
+
+
+@media screen and (max-width: 767px) {
+  .row {
+    width: 100%;
+  }
+  .navbar {
+    width: 100%;
+    float: none;
+    text-align: start;
+    }
+  .text::before{
+    display: none;
+  }
+  .btn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .row {
+    width: 100%;
+  }
+  .navbar {
+    width: 100%;
+    float: none;
+    text-align: left;
+    }
+  .text::before{
+    display: none;
+  }
+  .btn {
+    display: none;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

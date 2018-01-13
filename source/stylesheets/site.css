@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css?family=Arsenal:700&subset=cyrillic-ext");
+.row {
+  float: left;
+  width: 30%; }
+
+img {
+  float: left; }
+
+#brand {
+  float: left;
+  margin: 10px 5px;
+  color: #2f3132;
+  font-family: "Arsenal", sans-serif;
+  letter-spacing: 1px; }
+
+.navbar {
+  width: 70%;
+  float: left;
+  text-align: right; }
+  .navbar a {
+    color: #2f3132;
+    text-decoration: none;
+    font-family: "Arsenal", sans-serif;
+    letter-spacing: 1px;
+    margin-left: 15px; }
+  .navbar a:hover {
+    border-bottom: 2px solid #ff3d00; }
+  .navbar a.presentation {
+    background-color: #ff3d00;
+    color: white;
+    padding: 5px 14px; }
+  .navbar a.presentation:hover {
+    background-color: transparent;
+    color: #ff3d00;
+    border: 2px solid #ff3d00; }
+
+#main {
+  clear: both;
+  text-align: left;
+  padding-top: 90px;
+  padding-left: 40px;
+  background: url("../images/bckg.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  height: 100vh; }
+  #main a {
+    display: block;
+    text-decoration: none;
+    position: relative; }
+  #main .number {
+    color: #e9e8e6;
+    font-family: "Arsenal", sans-serif;
+    font-size: 72px;
+    margin: 0;
+    padding: 0; }
+  #main .text {
+    font-family: "Arsenal", sans-serif;
+    color: #2f3132;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0; }
+  #main .text::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 75px;
+    transition: width .5s ease-in-out;
+    border-bottom: 2px solid #ff3d00;
+    bottom: 0; }
+  #main .text:hover::before {
+    width: 400px; }
+
+  /* .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  bottom: 0;
+  margin: 100px;
+
+  .fwd {
+    padding: 20px 21px;
+    background-color: $color-detail;
+    transform: rotate(45deg);
+  
+  .arrow2 {    
+    left: auto;
+    right: auto;
+    border: solid rgb(255,255,255);
+    border-width: 0 3px 3px 0;
+    display: block;
+    align-items: center;
+    padding: 3px;
+    margin: 2px;
+  }
+}
+}
+
+  .btn:hover {
+    .fwd {
+      padding: 20px 21px;
+      background-color: $color-detail;
+      transform: rotate(45deg);
+    
+    .arrow1 {
+      border: solid rgba(255,255,255, 0.4);
+      border-width: 0 3px 3px 0;
+      align-items: center;
+      display: block;
+      padding: 3px;
+      margin: 2px;
+    }
+    .arrow2 {
+      position: absolute;
+      border: solid rgba(255,255,255, 0.7);
+      border-width: 0 3px 3px 0;
+      align-items: center;
+      display: block;
+      padding: 3px;
+      margin: 2px;
+    }
+    .arrow3 {    
+      position: absolute;
+      border: solid rgb(255,255,255);
+      border-width: 0 3px 3px 0;
+      align-items: center;
+      display: block;
+      padding: 3px;
+      margin: 2px;
+    }
+  }
+  } */
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  bottom: 0; }
+  .btn .fwd {
+    padding: 20px 21px;
+    background-color: #ff3d00;
+    transform: rotate(45deg);
+    box-shadow: 0 0 40px 40px #ff3d00 inset, 0 0 0 0 #ff3d00;
+    transition: all 150ms ease-in-out; }
+    .btn .fwd .arrow2 {
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      display: block;
+      align-items: center;
+      padding: 3px;
+      margin: 2px; }
+
+.fwd:hover {
+  box-shadow: 0 0 10px 0 #ff3d00 inset, 0 0 10px 4px #ff3d00;
+  background-color: transparent; }
+  .fwd:hover .arrow2 {
+    border: solid #ff3d00;
+    border-width: 0 3px 3px 0; }
+
+#decision {
+  background-image: url("../images/bckg.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  height: 100vh; }
+
+#forwhom {
+  background: url("../images/bckg.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  height: 100vh; }
+
+#team {
+  background: url("../images/bckg.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  height: 100vh; }
+
+#pres {
+  background: url("../images/bckg.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  height: 100vh; }
+
+@media screen and (max-width: 767px) {
+  .row {
+    width: 100%; }
+
+  .navbar {
+    width: 100%;
+    float: none;
+    text-align: start; }
+
+  .text::before {
+    display: none; }
+
+  .btn {
+    display: none; } }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .row {
+    width: 100%; }
+
+  .navbar {
+    width: 100%;
+    float: none;
+    text-align: left; }
+
+  .text::before {
+    display: none; }
+
+  .btn {
+    display: none; } }
+
+/*# sourceMappingURL=site.css.map */
