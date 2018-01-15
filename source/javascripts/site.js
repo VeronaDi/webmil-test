@@ -1,5 +1,7 @@
-jQuery(document).ready(function(){
-	jQuery('dec').click(function() {
-		jQuery.scrollTo('#decision', 2000);
+$(document).ready(function(){
+	$('.smooth-scroll').click(function() {
+		$('html, body').animate({
+			scrollTop: $( $(this).attr('href') ).offset().top
+		}, 1000);
 	});
 });

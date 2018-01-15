@@ -4,7 +4,11 @@ $color-text: rgb(47,49,50);
 $color-detail: rgb(255, 61, 0);
 $letter: 1px;
 
-.row {
+body {
+  margin: 2px;
+}
+
+.logo {
   float: left;
   width: 30%;
 }
@@ -35,7 +39,8 @@ img {
    }
 
    a:hover {
-     border-bottom: 2px solid $color-detail;
+  /*transition: border 0.5s ease-in-out;*/
+    border-bottom: 2px solid $color-detail;
    }
 
    a.presentation {
@@ -51,7 +56,7 @@ img {
    }
 }
     
-#main {
+#decision {
   clear: both;
   text-align: left;
   padding-top: 90px;
@@ -63,7 +68,7 @@ img {
   height: 100vh;
 
   a {
-    display: block;
+    display: inline;
     text-decoration: none;
     position: relative;
   }
@@ -96,72 +101,75 @@ img {
   }
 
   .text:hover::before{
-    width: 400px;
+    width: 100%;
  }
 }
 
-  /* .btn {
+/* @mixin button-down {
+  .arrow1, .arrow2, .arrow3 {
+    position: absolute;
+    border-width: 0 1px 1px 0;
+    display: block;
+    padding: 3px;
+  } 
+} */
+
+  .btn {
   display: flex;
   flex-direction: column;
   align-items: center;  
   justify-content: center;
-  bottom: 0;
-  margin: 100px;
+  height: calc(100vh-345px-40px-300px);  
 
   .fwd {
-    padding: 20px 21px;
+    width: 40px;
+    height: 40px;
     background-color: $color-detail;
     transform: rotate(45deg);
   
   .arrow2 {    
-    left: auto;
-    right: auto;
-    border: solid rgb(255,255,255);
-    border-width: 0 3px 3px 0;
+    position: absolute;
     display: block;
-    align-items: center;
     padding: 3px;
-    margin: 2px;
+    border: solid rgb(255,255,255);  
+    border-width: 0 1px 1px 0;  
+    top: 15px;
+    left: 15px;
   }
 }
 }
 
-  .btn:hover {
-    .fwd {
-      padding: 20px 21px;
-      background-color: $color-detail;
-      transform: rotate(45deg);
-    
+  .btn:hover {    
     .arrow1 {
-      border: solid rgba(255,255,255, 0.4);
-      border-width: 0 3px 3px 0;
-      align-items: center;
+      position: absolute;
       display: block;
       padding: 3px;
-      margin: 2px;
+      border: solid rgba(255,255,255, 0.4);
+      border-width: 0 1px 1px 0;
+      top: 7px;
+      left: 7px; 
     }
     .arrow2 {
       position: absolute;
-      border: solid rgba(255,255,255, 0.7);
-      border-width: 0 3px 3px 0;
-      align-items: center;
       display: block;
-      padding: 3px;
-      margin: 2px;
+      border: solid rgba(255,255,255, 0.7);
+      border-width: 0 1px 1px 0;
+      top: 15px;
+      left: 15px;
     }
     .arrow3 {    
       position: absolute;
-      border: solid rgb(255,255,255);
-      border-width: 0 3px 3px 0;
-      align-items: center;
       display: block;
       padding: 3px;
+      border: solid rgb(255,255,255);
+      border-width: 0 1px 1px 0;
       margin: 2px;
+      top: 21px;
+      left: 21px;
     }
-  }
-  } */
+  } 
 
-  .btn {
+  /* .btn {
     display: flex;
     flex-direction: column;
     align-items: center;  
@@ -193,7 +201,7 @@ img {
         border: solid $color-detail;
         border-width: 0 3px 3px 0;
       }
-      }
+      }  */
     
 
 #decision {
