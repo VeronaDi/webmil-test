@@ -25,7 +25,7 @@ img {
   letter-spacing: $letter;
 }
 
-.navbar {
+.navbar-desktop {
   width: 70%;
   float: left;
   text-align: right;
@@ -55,7 +55,33 @@ img {
     border: 2px solid $color-detail;
    }
 }
-    
+
+.mobnav {
+  float: right;
+  margin: 10px;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+.mobnav:hover {
+  .navbar-mobile {
+    display: inline;
+    a {
+    color: $color-detail;
+    text-decoration: none;
+    font-family: $font-main;
+    letter-spacing: $letter;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+    a:hover {
+    border-bottom: 2px solid $color-text;
+    }
+ }
+}
+
 #decision {
   clear: both;
   text-align: left;
@@ -238,15 +264,10 @@ img {
 
 
 @media screen and (max-width: 767px) {
-  .row {
-    width: 100%;
+  .logo {
+    width: 50%;
   }
-  .navbar {
-    width: 100%;
-    float: none;
-    text-align: start;
-    }
-  .text::before{
+  .navbar-desktop {
     display: none;
   }
   .btn {
@@ -255,15 +276,10 @@ img {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .row {
-    width: 100%;
+  .logo {
+    width: 50%;
   }
-  .navbar {
-    width: 100%;
-    float: none;
-    text-align: left;
-    }
-  .text::before{
+  .navbar-desktop {
     display: none;
   }
   .btn {
@@ -272,9 +288,20 @@ img {
 }
 
 @media (min-width: 991px) and (max-width: 1199px) {
+  .mobnav {
+    display: none;
+  }
+  .navbar-mobile {
+    display: none;
+  }
 
 }
 
 @media (min-width: 1200px) {
-
+  .mobnav {
+    display: none;
+  }
+  .navbar-mobile {
+    display: none;
+  }
 }

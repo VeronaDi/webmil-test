@@ -3,10 +3,20 @@
   .logo
    = image_tag 'images/logo.gif'
    %h4#brand ЖИВАСОФТ
-  %nav.navbar
+  %nav.navbar-desktop
    %a.smooth-scroll{:href => '#decision'} Решения
    %a.smooth-scroll{:href => '#forwhom'} Для кого
    %a.smooth-scroll{:href => '#team'} Команда
    %a.smooth-scroll.presentation{:href => '#pres'} Презентация
-   
-   
+  
+  %div.mobnav
+   %i.fas.fa-bars.fa-2x
+   %nav.navbar-mobile
+    %div
+     %a{:href => '#decision'} Решения
+    %div
+     %a{:href => '#forwhom'} Для кого
+    %div
+     %a{:href => '#team'} Команда
+    %div
+     %a{:href => '#pres'} Презентация
