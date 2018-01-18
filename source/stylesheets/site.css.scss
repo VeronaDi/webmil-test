@@ -8,6 +8,8 @@ body {
   margin: 2px;
 }
 
+/* Header */
+
 .logo {
   float: left;
   width: 30%;
@@ -24,6 +26,8 @@ img {
   font-family: $font-main;
   letter-spacing: $letter;
 }
+
+/* Navigation desktop */
 
 .navbar-desktop {
   width: 70%;
@@ -56,31 +60,36 @@ img {
    }
 }
 
+/* Navigation mobile */
+
 .mobnav {
   float: right;
   margin: 10px;
+   button {
+     background: transparent;
+     border: none;
+   }
 }
 
-.navbar-mobile {
+#navbar-mobile {
   display: none;
 }
 
-.mobnav:hover {
-  .navbar-mobile {
-    display: inline;
-    a {
-    color: $color-detail;
-    text-decoration: none;
-    font-family: $font-main;
-    letter-spacing: $letter;
-    font-size: 20px;
-    margin-top: 10px;
-  }
-    a:hover {
-    border-bottom: 2px solid $color-text;
-    }
- }
+#navbar-mobile {
+  a {
+  color: $color-detail;
+  text-decoration: none;
+  font-family: $font-main;
+  letter-spacing: $letter;
+  font-size: 20px;
+  margin-top: 10px;
 }
+  a:hover {
+  border-bottom: 2px solid $color-text;
+  }
+}
+
+/* Decision page */
 
 #decision {
   clear: both;
@@ -131,6 +140,8 @@ img {
  }
 }
 
+/* Button Down #1 */
+
 /* @mixin button-down {
   .arrow1, .arrow2, .arrow3 {
     position: absolute;
@@ -170,7 +181,7 @@ img {
       position: absolute;
       display: block;
       padding: 3px;
-      border: solid rgba(255,255,255, 0.4);
+      border: solid rgba(255,255,255, 0.5);
       border-width: 0 1px 1px 0;
       top: 7px;
       left: 7px; 
@@ -178,7 +189,7 @@ img {
     .arrow2 {
       position: absolute;
       display: block;
-      border: solid rgba(255,255,255, 0.7);
+      border: solid rgba(255,255,255, 0.8);
       border-width: 0 1px 1px 0;
       top: 15px;
       left: 15px;
@@ -194,6 +205,8 @@ img {
       left: 21px;
     }
   } 
+
+  /* Button Down #2 */
 
   /* .btn {
     display: flex;
@@ -229,16 +242,24 @@ img {
       }
       }  */
     
-
-#decision {
-  background-image: url('../images/bckg.jpg');
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
-  height: 100vh;
-}
+/* For Whom Page */
 
 #forwhom {
+  background: url('../images/b.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+   img {
+     width: 100%;
+     margin: 0;
+     position: absolute;
+     z-index: 2;
+    }
+}
+
+/* Team & Presentation Pages */
+
+#team, #pres {
   background: url('../images/bckg.jpg');
   background-repeat: no-repeat;
   background-position: top left;
@@ -246,22 +267,7 @@ img {
   height: 100vh;
 }
 
-#team {
-  background: url('../images/bckg.jpg');
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
-  height: 100vh;
-}
-
-#pres {
-  background: url('../images/bckg.jpg');
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
-  height: 100vh;
-}
-
+/* Media Querries */
 
 @media screen and (max-width: 767px) {
   .logo {
@@ -291,7 +297,7 @@ img {
   .mobnav {
     display: none;
   }
-  .navbar-mobile {
+  #navbar-mobile {
     display: none;
   }
 
@@ -301,7 +307,7 @@ img {
   .mobnav {
     display: none;
   }
-  .navbar-mobile {
+  #navbar-mobile {
     display: none;
   }
 }

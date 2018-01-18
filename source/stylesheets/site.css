@@ -2,6 +2,7 @@
 body {
   margin: 2px; }
 
+/* Header */
 .logo {
   float: left;
   width: 30%; }
@@ -16,6 +17,7 @@ img {
   font-family: "Arsenal", sans-serif;
   letter-spacing: 1px; }
 
+/* Navigation desktop */
 .navbar-desktop {
   width: 70%;
   float: left;
@@ -38,25 +40,28 @@ img {
     color: #ff3d00;
     border: 2px solid #ff3d00; }
 
+/* Navigation mobile */
 .mobnav {
   float: right;
   margin: 10px; }
+  .mobnav button {
+    background: transparent;
+    border: none; }
 
-.navbar-mobile {
+#navbar-mobile {
   display: none; }
 
-.mobnav:hover .navbar-mobile {
-  display: inline; }
-  .mobnav:hover .navbar-mobile a {
-    color: #ff3d00;
-    text-decoration: none;
-    font-family: "Arsenal", sans-serif;
-    letter-spacing: 1px;
-    font-size: 20px;
-    margin-top: 10px; }
-  .mobnav:hover .navbar-mobile a:hover {
-    border-bottom: 2px solid #2f3132; }
+#navbar-mobile a {
+  color: #ff3d00;
+  text-decoration: none;
+  font-family: "Arsenal", sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-top: 10px; }
+#navbar-mobile a:hover {
+  border-bottom: 2px solid #2f3132; }
 
+/* Decision page */
 #decision {
   clear: both;
   text-align: left;
@@ -95,6 +100,7 @@ img {
   #decision .text:hover::before {
     width: 100%; }
 
+/* Button Down #1 */
 /* @mixin button-down {
   .arrow1, .arrow2, .arrow3 {
     position: absolute;
@@ -127,14 +133,14 @@ img {
   position: absolute;
   display: block;
   padding: 3px;
-  border: solid rgba(255, 255, 255, 0.4);
+  border: solid rgba(255, 255, 255, 0.5);
   border-width: 0 1px 1px 0;
   top: 7px;
   left: 7px; }
 .btn:hover .arrow2 {
   position: absolute;
   display: block;
-  border: solid rgba(255, 255, 255, 0.7);
+  border: solid rgba(255, 255, 255, 0.8);
   border-width: 0 1px 1px 0;
   top: 15px;
   left: 15px; }
@@ -148,6 +154,7 @@ img {
   top: 21px;
   left: 21px; }
 
+/* Button Down #2 */
   /* .btn {
     display: flex;
     flex-direction: column;
@@ -181,34 +188,27 @@ img {
         border-width: 0 3px 3px 0;
       }
       }  */
-#decision {
-  background-image: url("../images/bckg.jpg");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
-  height: 100vh; }
-
+/* For Whom Page */
 #forwhom {
+  background: url("../images/b.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh; }
+  #forwhom img {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    z-index: 2; }
+
+/* Team & Presentation Pages */
+#team, #pres {
   background: url("../images/bckg.jpg");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
   height: 100vh; }
 
-#team {
-  background: url("../images/bckg.jpg");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
-  height: 100vh; }
-
-#pres {
-  background: url("../images/bckg.jpg");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
-  height: 100vh; }
-
+/* Media Querries */
 @media screen and (max-width: 767px) {
   .logo {
     width: 50%; }
@@ -231,13 +231,13 @@ img {
   .mobnav {
     display: none; }
 
-  .navbar-mobile {
+  #navbar-mobile {
     display: none; } }
 @media (min-width: 1200px) {
   .mobnav {
     display: none; }
 
-  .navbar-mobile {
+  #navbar-mobile {
     display: none; } }
 
 /*# sourceMappingURL=site.css.map */
