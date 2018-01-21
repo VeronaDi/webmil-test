@@ -5,7 +5,7 @@ $color-detail: rgb(255, 61, 0);
 $letter: 1px;
 
 body {
-  margin: 2px;
+  background-color: rgb(250,248,246);
 }
 
 /* Header */
@@ -24,13 +24,25 @@ img {
   margin: 10px 5px;
   color: $color-text;
   font-family: $font-main;
+  font-size: 17px;
+  font-weight: bolder;
   letter-spacing: $letter;
 }
 
 /* Navigation desktop */
 
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  top: 10px;
+  right: 5px;
+  left: 15px;
+  z-index: 5;
+}
+
 .navbar-desktop {
-  width: 70%;
+  width: 68%;
   float: left;
   text-align: right;
 
@@ -38,25 +50,27 @@ img {
      color: $color-text;
      text-decoration: none;
      font-family: $font-main;
+     font-size: 17px;
      letter-spacing: $letter;
-     margin-left: 15px;
+     margin-left: 17px;
    }
 
    a:hover {
-  /*transition: border 0.5s ease-in-out;*/
-    border-bottom: 2px solid $color-detail;
+    border-bottom: 3px solid $color-detail;
    }
 
    a.presentation {
     background-color: $color-detail;
     color: rgb(255,255,255);
-    padding: 5px 14px;
+    padding: 5px 15px;
    }
 
    a.presentation:hover {
     background-color: transparent;
     color: $color-detail;
     border: 2px solid $color-detail;
+    box-shadow: 0 0 10px 0 $color-detail inset, 0 0 10px 4px $color-detail;
+    background-color: transparent;
    }
 }
 
@@ -65,53 +79,77 @@ img {
 .mobnav {
   float: right;
   margin: 10px;
-   button {
+    button {
      background: transparent;
      border: none;
    }
+    i {
+     width: 35px;
+     height: 5px;
+     background-color: $color-detail;
+     margin: 6px 0;
+     display: block;
+     position: relative;
+     transition: 0.4s;
+     }
 }
 
 #navbar-mobile {
   display: none;
+    a {
+    color: $color-text;
+    text-decoration: none;
+    font-family: $font-main;
+    letter-spacing: $letter;
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 2;
+    }
+    a:hover {
+    border-bottom: 2px solid $color-detail;
+    }
 }
 
-#navbar-mobile {
-  a {
-  color: $color-detail;
-  text-decoration: none;
-  font-family: $font-main;
-  letter-spacing: $letter;
-  font-size: 20px;
-  margin-top: 10px;
+/*Background image */
+
+.bckg-image {
+  background: url('../images/back.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  right: 170px;
+  position: absolute;
+  z-index: 0;
 }
-  a:hover {
-  border-bottom: 2px solid $color-text;
+.bckg-line {
+    position: relative;
   }
-}
+
 
 /* Decision page */
 
 #decision {
   clear: both;
   text-align: left;
-  padding-top: 90px;
-  padding-left: 40px;
-  background: url('../images/bckg.jpg');
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
+  padding-top: 100px;
+  padding-left: 67px;
   height: 100vh;
+  
+  .content {
+    margin-bottom: 34px;
+  }
 
-  a {
+  span {
     display: inline;
     text-decoration: none;
     position: relative;
+    line-height: 0.9;
   }
 
   .number {
     color: rgb(233,232,230);
     font-family: $font-main;
-    font-size: 72px;
+    font-size: 100px;
     margin: 0;
     padding: 0;
   }
@@ -119,7 +157,7 @@ img {
   .text {
     font-family: $font-main;
     color: $color-text;
-    font-size: 20px;
+    font-size: 26px;
     letter-spacing: $letter;
     margin: 0;
     padding: 0;
@@ -156,7 +194,7 @@ img {
   flex-direction: column;
   align-items: center;  
   justify-content: center;
-  height: calc(100vh-345px-40px-300px);  
+  height: calc(100vh - 550px); 
 
   .fwd {
     width: 40px;
@@ -242,30 +280,11 @@ img {
       }
       }  */
     
-/* For Whom Page */
+/* Other Pages */
 
-#forwhom {
-  background: url('../images/b.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
+ #forwhom, #team, #pres {
   height: 100vh;
-   img {
-     width: 100%;
-     margin: 0;
-     position: absolute;
-     z-index: 2;
-    }
-}
-
-/* Team & Presentation Pages */
-
-#team, #pres {
-  background: url('../images/bckg.jpg');
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
-  height: 100vh;
-}
+} 
 
 /* Media Querries */
 
@@ -273,24 +292,40 @@ img {
   .logo {
     width: 50%;
   }
-  .navbar-desktop {
+  .navigation {
+    position: relative;
+  }
+  .navbar-desktop, .btn, .bckg-image, .bckg-line {
     display: none;
   }
-  .btn {
-    display: none;
+  #decision {
+  .number {
+    font-size: 80px;
   }
+  .text {
+    font-size: 20px;
+  }
+}
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .logo {
     width: 50%;
   }
-  .navbar-desktop {
+  .navigation {
+    position: relative;
+  }
+  .navbar-desktop, .btn, .bckg-image, .bckg-line {
     display: none;
   }
-  .btn {
-    display: none;
+  #decision {
+  .number {
+    font-size: 85px;
   }
+  .text {
+    font-size: 22px;
+  }
+}
 }
 
 @media (min-width: 991px) and (max-width: 1199px) {

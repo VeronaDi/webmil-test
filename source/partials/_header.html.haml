@@ -1,17 +1,20 @@
 %body
  %header
-  .logo
-   = image_tag 'images/logo.gif'
-   %h4#brand ЖИВАСОФТ
-  %nav.navbar-desktop
-   %a.smooth-scroll{:href => '#decision'} Решения
-   %a.smooth-scroll{:href => '#forwhom'} Для кого
-   %a.smooth-scroll{:href => '#team'} Команда
-   %a.smooth-scroll.presentation{:href => '#pres'} Презентация
+  %div.navigation
+   .logo
+    = image_tag 'images/logo.gif'
+    %h1#brand ЖИВАСОФТ
+   %nav.navbar-desktop
+    %a.smooth-scroll{:href => '#decision'} Решения
+    %a.smooth-scroll{:href => '#forwhom'} Для кого
+    %a.smooth-scroll{:href => '#team'} Команда
+    %a.smooth-scroll.presentation{:href => '#pres'} Презентация
   
   %div.mobnav
    %button#hideshow
-    %i.fas.fa-bars.fa-2x
+    %i
+    %i
+    %i
    %nav#navbar-mobile
     %div
      %a{:href => '#decision'} Решения
@@ -20,4 +23,4 @@
     %div
      %a{:href => '#team'} Команда
     %div
-     %a{:href => '#pres'} Презентация
+     %a.presentation{:href => '#pres'} Презентация

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Arsenal:700&subset=cyrillic-ext");
 body {
-  margin: 2px; }
+  background-color: #faf8f6; }
 
 /* Header */
 .logo {
@@ -15,30 +15,42 @@ img {
   margin: 10px 5px;
   color: #2f3132;
   font-family: "Arsenal", sans-serif;
+  font-size: 17px;
+  font-weight: bolder;
   letter-spacing: 1px; }
 
 /* Navigation desktop */
+.navigation {
+  position: fixed;
+  width: 100%;
+  top: 10px;
+  right: 5px;
+  left: 15px;
+  z-index: 5; }
+
 .navbar-desktop {
-  width: 70%;
+  width: 68%;
   float: left;
   text-align: right; }
   .navbar-desktop a {
     color: #2f3132;
     text-decoration: none;
     font-family: "Arsenal", sans-serif;
+    font-size: 17px;
     letter-spacing: 1px;
-    margin-left: 15px; }
+    margin-left: 17px; }
   .navbar-desktop a:hover {
-    /*transition: border 0.5s ease-in-out;*/
-    border-bottom: 2px solid #ff3d00; }
+    border-bottom: 3px solid #ff3d00; }
   .navbar-desktop a.presentation {
     background-color: #ff3d00;
     color: white;
-    padding: 5px 14px; }
+    padding: 5px 15px; }
   .navbar-desktop a.presentation:hover {
     background-color: transparent;
     color: #ff3d00;
-    border: 2px solid #ff3d00; }
+    border: 2px solid #ff3d00;
+    box-shadow: 0 0 10px 0 #ff3d00 inset, 0 0 10px 4px #ff3d00;
+    background-color: transparent; }
 
 /* Navigation mobile */
 .mobnav {
@@ -47,45 +59,65 @@ img {
   .mobnav button {
     background: transparent;
     border: none; }
+  .mobnav i {
+    width: 35px;
+    height: 5px;
+    background-color: #ff3d00;
+    margin: 6px 0;
+    display: block;
+    position: relative;
+    transition: 0.4s; }
 
 #navbar-mobile {
   display: none; }
+  #navbar-mobile a {
+    color: #2f3132;
+    text-decoration: none;
+    font-family: "Arsenal", sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 2; }
+  #navbar-mobile a:hover {
+    border-bottom: 2px solid #ff3d00; }
 
-#navbar-mobile a {
-  color: #ff3d00;
-  text-decoration: none;
-  font-family: "Arsenal", sans-serif;
-  letter-spacing: 1px;
-  font-size: 20px;
-  margin-top: 10px; }
-#navbar-mobile a:hover {
-  border-bottom: 2px solid #2f3132; }
+/*Background image */
+.bckg-image {
+  background: url("../images/back.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  right: 170px;
+  position: absolute;
+  z-index: 0; }
+
+.bckg-line {
+  position: relative; }
 
 /* Decision page */
 #decision {
   clear: both;
   text-align: left;
-  padding-top: 90px;
-  padding-left: 40px;
-  background: url("../images/bckg.jpg");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
+  padding-top: 100px;
+  padding-left: 67px;
   height: 100vh; }
-  #decision a {
+  #decision .content {
+    margin-bottom: 34px; }
+  #decision span {
     display: inline;
     text-decoration: none;
-    position: relative; }
+    position: relative;
+    line-height: 0.9; }
   #decision .number {
     color: #e9e8e6;
     font-family: "Arsenal", sans-serif;
-    font-size: 72px;
+    font-size: 100px;
     margin: 0;
     padding: 0; }
   #decision .text {
     font-family: "Arsenal", sans-serif;
     color: #2f3132;
-    font-size: 20px;
+    font-size: 26px;
     letter-spacing: 1px;
     margin: 0;
     padding: 0; }
@@ -114,7 +146,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh-345px-40px-300px); }
+  height: calc(100vh - 550px); }
   .btn .fwd {
     width: 40px;
     height: 40px;
@@ -188,24 +220,8 @@ img {
         border-width: 0 3px 3px 0;
       }
       }  */
-/* For Whom Page */
-#forwhom {
-  background: url("../images/b.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100vh; }
-  #forwhom img {
-    width: 100%;
-    margin: 0;
-    position: absolute;
-    z-index: 2; }
-
-/* Team & Presentation Pages */
-#team, #pres {
-  background: url("../images/bckg.jpg");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
+/* Other Pages */
+#forwhom, #team, #pres {
   height: 100vh; }
 
 /* Media Querries */
@@ -213,20 +229,30 @@ img {
   .logo {
     width: 50%; }
 
-  .navbar-desktop {
+  .navigation {
+    position: relative; }
+
+  .navbar-desktop, .btn, .bckg-image, .bckg-line {
     display: none; }
 
-  .btn {
-    display: none; } }
+  #decision .number {
+    font-size: 80px; }
+  #decision .text {
+    font-size: 20px; } }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .logo {
     width: 50%; }
 
-  .navbar-desktop {
+  .navigation {
+    position: relative; }
+
+  .navbar-desktop, .btn, .bckg-image, .bckg-line {
     display: none; }
 
-  .btn {
-    display: none; } }
+  #decision .number {
+    font-size: 85px; }
+  #decision .text {
+    font-size: 22px; } }
 @media (min-width: 991px) and (max-width: 1199px) {
   .mobnav {
     display: none; }

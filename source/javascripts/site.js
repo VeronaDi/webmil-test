@@ -17,17 +17,9 @@ $(document).ready(function(){
 });
 
 /* Background scroll */
+$(document).ready(function(){
+$(window).scroll(function () {
+    $(".bckg-image").css("background-position","20% " + ($(this).scrollTop() / 2) + "px");
+});
+});
 
-var velocity = 0.3;
-
-function update(){ 
-var pos = $(window).scrollTop(); 
-$('#forwhom').each(function() { 
-    var $element = $(this);
-    var height = $element.height()+135;
-    $(this).css('backgroundPosition', '20% ' + Math.round((height - pos) * velocity) +  'px'); 
-   }); 
-   };
-
- $(window).bind('scroll', update);
-    
