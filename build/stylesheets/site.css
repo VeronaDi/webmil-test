@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css?family=Arsenal:700&subset=cyrillic-ext");
+body {
+  background-color: #faf8f6; }
+
+/* Header */
+.logo {
+  float: left;
+  width: 30%; }
+
+img {
+  float: left; }
+
+#brand {
+  float: left;
+  margin: 10px 5px;
+  color: #2f3132;
+  font-family: "Arsenal", sans-serif;
+  font-size: 17px;
+  font-weight: bolder;
+  letter-spacing: 1px; }
+
+/* Navigation desktop */
+.navigation {
+  position: fixed;
+  width: 100%;
+  top: 10px;
+  right: 5px;
+  left: 15px;
+  z-index: 5; }
+
+.navbar-desktop {
+  width: 68%;
+  float: left;
+  text-align: right; }
+  .navbar-desktop a {
+    color: #2f3132;
+    text-decoration: none;
+    font-family: "Arsenal", sans-serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-left: 17px; }
+  .navbar-desktop a:hover {
+    border-bottom: 3px solid #ff3d00; }
+  .navbar-desktop a.presentation {
+    background-color: #ff3d00;
+    color: white;
+    padding: 5px 15px; }
+  .navbar-desktop a.presentation:hover {
+    background-color: transparent;
+    color: #ff3d00;
+    border: 2px solid #ff3d00;
+    -webkit-box-shadow: 0 0 10px 0 #ff3d00 inset, 0 0 10px 4px #ff3d00;
+            box-shadow: 0 0 10px 0 #ff3d00 inset, 0 0 10px 4px #ff3d00;
+    background-color: transparent; }
+
+/* Navigation mobile */
+.mobnav {
+  float: right;
+  margin: 10px; }
+  .mobnav button {
+    background: transparent;
+    border: none; }
+  .mobnav i {
+    width: 35px;
+    height: 5px;
+    background-color: #ff3d00;
+    margin: 6px 0;
+    display: block;
+    position: relative;
+    -webkit-transition: 0.4s;
+    transition: 0.4s; }
+
+#navbar-mobile {
+  display: none; }
+  #navbar-mobile a {
+    color: #2f3132;
+    text-decoration: none;
+    font-family: "Arsenal", sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 2; }
+  #navbar-mobile a:hover {
+    border-bottom: 2px solid #ff3d00; }
+
+/*Background image */
+.bckg-image {
+  background: url("../images/back.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  right: 170px;
+  position: absolute;
+  z-index: 0; }
+
+.bckg-line {
+  position: relative; }
+
+/* Decision page */
+#decision {
+  clear: both;
+  text-align: left;
+  padding-top: 100px;
+  padding-left: 67px;
+  height: 100vh; }
+  #decision .content {
+    margin-bottom: 34px; }
+  #decision span {
+    display: inline;
+    text-decoration: none;
+    position: relative;
+    line-height: 0.9; }
+  #decision .number {
+    color: #e9e8e6;
+    font-family: "Arsenal", sans-serif;
+    font-size: 100px;
+    margin: 0;
+    padding: 0; }
+  #decision .text {
+    font-family: "Arsenal", sans-serif;
+    color: #2f3132;
+    font-size: 26px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0; }
+  #decision .text::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 75px;
+    -webkit-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;
+    border-bottom: 2px solid #ff3d00;
+    bottom: 0; }
+  #decision .text:hover::before {
+    width: 100%; }
+
+/* Button Down #1 */
+/* @mixin button-down {
+  .arrow1, .arrow2, .arrow3 {
+    position: absolute;
+    border-width: 0 1px 1px 0;
+    display: block;
+    padding: 3px;
+  } 
+} */
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: calc(100vh - 550px); }
+  .btn .fwd {
+    width: 40px;
+    height: 40px;
+    background-color: #ff3d00;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+    .btn .fwd .arrow2 {
+      position: absolute;
+      display: block;
+      padding: 3px;
+      border: solid white;
+      border-width: 0 1px 1px 0;
+      top: 15px;
+      left: 15px; }
+
+.btn:hover .arrow1 {
+  position: absolute;
+  display: block;
+  padding: 3px;
+  border: solid rgba(255, 255, 255, 0.5);
+  border-width: 0 1px 1px 0;
+  top: 7px;
+  left: 7px; }
+.btn:hover .arrow2 {
+  position: absolute;
+  display: block;
+  border: solid rgba(255, 255, 255, 0.8);
+  border-width: 0 1px 1px 0;
+  top: 15px;
+  left: 15px; }
+.btn:hover .arrow3 {
+  position: absolute;
+  display: block;
+  padding: 3px;
+  border: solid white;
+  border-width: 0 1px 1px 0;
+  margin: 2px;
+  top: 21px;
+  left: 21px; }
+
+/* Button Down #2 */
+  /* .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    margin-top:100px;
+    bottom: 0;
+    
+    .fwd {
+      padding: 20px 21px;
+      background-color: $color-detail;
+      transform: rotate(45deg);
+      box-shadow: 0 0 40px 40px $color-detail inset, 0 0 0 0 $color-detail;
+      transition: all 150ms ease-in-out;
+      .arrow2 {    
+        border: solid rgb(255,255,255);
+        border-width: 0 3px 3px 0;
+        display: block;
+        align-items: center;
+        padding: 3px;
+        margin: 2px;
+      }
+    }
+    }
+
+    .fwd:hover {
+      box-shadow: 0 0 10px 0 $color-detail inset, 0 0 10px 4px $color-detail;
+      background-color: transparent;
+      .arrow2 {
+        border: solid $color-detail;
+        border-width: 0 3px 3px 0;
+      }
+      }  */
+/* Other Pages */
+#forwhom, #team, #pres {
+  height: 100vh; }
+
+/* Media Querries */
+@media screen and (max-width: 767px) {
+  .logo {
+    width: 50%; }
+
+  .navigation {
+    position: relative; }
+
+  .navbar-desktop, .btn, .bckg-image, .bckg-line {
+    display: none; }
+
+  #decision .number {
+    font-size: 80px; }
+  #decision .text {
+    font-size: 20px; } }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .logo {
+    width: 50%; }
+
+  .navigation {
+    position: relative; }
+
+  .navbar-desktop, .btn, .bckg-image, .bckg-line {
+    display: none; }
+
+  #decision .number {
+    font-size: 85px; }
+  #decision .text {
+    font-size: 22px; } }
+@media (min-width: 991px) and (max-width: 1199px) {
+  .mobnav {
+    display: none; }
+
+  #navbar-mobile {
+    display: none; } }
+@media (min-width: 1200px) {
+  .mobnav {
+    display: none; }
+
+  #navbar-mobile {
+    display: none; } }
