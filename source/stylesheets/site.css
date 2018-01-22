@@ -155,16 +155,16 @@ img {
     .btn .fwd .arrow2 {
       position: absolute;
       display: block;
-      padding: 3px;
+      padding: 6px;
       border: solid white;
       border-width: 0 1px 1px 0;
-      top: 15px;
-      left: 15px; }
+      top: 12px;
+      left: 12px; }
 
 .btn:hover .arrow1 {
   position: absolute;
   display: block;
-  padding: 3px;
+  padding: 6px;
   border: solid rgba(255, 255, 255, 0.5);
   border-width: 0 1px 1px 0;
   top: 7px;
@@ -174,17 +174,16 @@ img {
   display: block;
   border: solid rgba(255, 255, 255, 0.8);
   border-width: 0 1px 1px 0;
-  top: 15px;
-  left: 15px; }
+  top: 12px;
+  left: 12px; }
 .btn:hover .arrow3 {
   position: absolute;
   display: block;
-  padding: 3px;
+  padding: 6px;
   border: solid white;
   border-width: 0 1px 1px 0;
-  margin: 2px;
-  top: 21px;
-  left: 21px; }
+  top: 17px;
+  left: 17px; }
 
 /* Button Down #2 */
   /* .btn {
@@ -246,7 +245,7 @@ img {
   .navigation {
     position: relative; }
 
-  .navbar-desktop, .btn, .bckg-image, .bckg-line {
+  .navbar-desktop, .bckg-image, .bckg-line {
     display: none; }
 
   #decision .number {
