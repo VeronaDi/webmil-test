@@ -54,6 +54,7 @@ img {
      font-size: 17px;
      letter-spacing: $letter;
      margin-left: 17px;
+     background-color: rgba(250,248,246, 0.6);
    }
 
    a:hover {
@@ -177,9 +178,9 @@ img {
     content: '';
     position: absolute;
     height: 2px;
-    width: 75px;
+    width: 110px;
     transition: width .5s ease-in-out; 
-    border-bottom: 2px solid $color-detail;   
+    border-bottom: 4px solid $color-detail;   
     bottom: 0;
   }
 
@@ -305,8 +306,11 @@ img {
   }
   .navigation {
     position: relative;
+    top: 15px;
+    right: 10px;
+    left: 20px;
   }
-  .navbar-desktop, .btn, .bckg-image, .bckg-line {
+  .navbar-desktop, .btn, .bckg-image, .bckg-line, .text::before {
     display: none;
   }
   #decision {
@@ -315,6 +319,9 @@ img {
   }
   .text {
     font-size: 20px;
+  }
+  .decisionText {
+    height: calc(100vh - 20px);
   }
 }
 }
@@ -342,7 +349,25 @@ img {
 }
 }
 
-@media (min-width: 991px) and (max-width: 1399px) {
+@media (min-width: 991px) and (max-width: 1024px) {
+  body {
+    border: 20px solid white;
+  }
+  .bckg-image {
+    display: none;
+  }
+  .navigation {
+    top: 40px;
+  }
+  .mobnav {
+    display: none;
+  }
+  #navbar-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1399px) {
   body {
     border: 20px solid white;
   }
@@ -370,7 +395,7 @@ img {
   }
   #decision {
     .decisionText {
-      height: calc(100vh - 40px);
+      height: calc(100vh - 250px - 10px);
   }
 }
   .navbar-desktop {
