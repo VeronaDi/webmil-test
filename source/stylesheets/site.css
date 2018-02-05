@@ -22,15 +22,20 @@ img {
 
 /* Navigation desktop */
 .navigation {
-  position: fixed;
-  width: 100%;
-  top: 60px;
+  position: absolute;
+  width: 94%;
   right: 40px;
   left: 60px;
   z-index: 5; }
 
+.navbar-fixed {
+  top: 0;
+  z-index: 5;
+  position: fixed;
+  width: 94%; }
+
 .navbar-desktop {
-  width: 67%;
+  width: 74%;
   float: left;
   text-align: right; }
   .navbar-desktop a {
@@ -39,14 +44,13 @@ img {
     font-family: "Arsenal", sans-serif;
     font-size: 17px;
     letter-spacing: 1px;
-    margin-left: 17px;
-    background-color: rgba(250, 248, 246, 0.6); }
+    margin-left: 17px; }
   .navbar-desktop a:hover {
     border-bottom: 3px solid #ff3d00; }
   .navbar-desktop a.presentation {
     background-color: #ff3d00;
     color: white;
-    padding: 7px 17px; }
+    padding: 7px 16px; }
   .navbar-desktop a.presentation:hover {
     background-color: transparent;
     color: #ff3d00;
@@ -67,8 +71,7 @@ img {
     background-color: #ff3d00;
     margin: 6px 0;
     display: block;
-    position: relative;
-    transition: 0.4s; }
+    position: relative; }
 
 #navbar-mobile {
   display: none; }
@@ -137,7 +140,7 @@ img {
     width: 110px;
     transition: width .5s ease-in-out;
     border-bottom: 4px solid #ff3d00;
-    bottom: 0; }
+    bottom: -10px; }
   #decision .text:hover::before {
     width: 100%; }
 
@@ -237,32 +240,43 @@ img {
     border: none; }
 
   .logo {
-    width: 50%; }
+    width: 50%;
+    margin-left: 10px; }
 
   .navigation {
     position: relative;
-    top: 15px;
+    top: 25px;
     right: 10px;
-    left: 20px; }
+    left: 0px; }
+
+  #hideshow {
+    margin-top: 20px; }
 
   .navbar-desktop, .btn, .bckg-image, .bckg-line, .text::before {
     display: none; }
 
-  #decision .number {
-    font-size: 80px; }
-  #decision .text {
-    font-size: 20px; }
-  #decision .decisionText {
-    height: calc(100vh - 20px); } }
+  #decision {
+    padding-top: 0px;
+    padding-left: 15px; }
+    #decision .number {
+      font-size: 80px; }
+    #decision .text {
+      font-size: 20px; }
+    #decision .decisionText {
+      height: calc(100vh - 70px); } }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   body {
     border: none; }
 
   .logo {
-    width: 50%; }
+    width: 50%;
+    margin-left: 10px; }
 
   .navigation {
-    position: relative; }
+    position: relative;
+    top: 20px;
+    right: 0px;
+    left: 0px; }
 
   .navbar-desktop, .bckg-image, .bckg-line {
     display: none; }
@@ -281,6 +295,9 @@ img {
   .navigation {
     top: 40px; }
 
+  .navbar-desktop {
+    width: 70%; }
+
   .mobnav {
     display: none; }
 
@@ -295,6 +312,9 @@ img {
 
   .navigation {
     top: 40px; }
+
+  .navbar-fixed {
+    top: 20px; }
 
   .mobnav {
     display: none; }
@@ -312,9 +332,20 @@ img {
     height: calc(100vh - 250px - 10px); }
 
   .navbar-desktop {
-    width: 70%; }
+    width: 74%; }
 
   .bckg-image {
-    right: 220px; } }
+    right: 220px; }
+
+  .navigation {
+    top: 57px;
+    width: 96%; }
+
+  .navbar-fixed {
+    top: 25px;
+    width: 96%; }
+
+  .logo {
+    width: 24.5%; } }
 
 /*# sourceMappingURL=site.css.map */
